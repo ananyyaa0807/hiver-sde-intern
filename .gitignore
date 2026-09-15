@@ -1,6 +1,12 @@
 # Raw dataset
 data/raw/
 
+# Generated/intermediate data
+data/*.csv
+
+# Trained model
+data/*.pkl
+
 # Python virtual environment
 .venv/
 
