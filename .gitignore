@@ -20,6 +20,11 @@ __pycache__/
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
-
 # Allow small demo dataset
 !data/demo_resolutions.csv
+
+# Allow small demo model
+!data/demo_intent_model.pkl
+
+# Allow reviewed golden evaluation set
+!data/golden_set.csv

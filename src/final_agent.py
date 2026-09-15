@@ -4,14 +4,13 @@ import joblib
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-
-MODEL_PATH = "data/intent_model.pkl"
-RESOLUTION_PATH = "data/spotify_resolutions.csv"
+MODEL_PATH = "data/demo_intent_model.pkl"
+RESOLUTIONS_PATH = "data/demo_resolutions.csv"
 
 
 model = joblib.load(MODEL_PATH)
 
-resolutions = pd.read_csv(RESOLUTION_PATH)
+resolutions = pd.read_csv(RESOLUTIONS_PATH)
 
 resolutions["customer_message"] = (
     resolutions["customer_message"].fillna("")

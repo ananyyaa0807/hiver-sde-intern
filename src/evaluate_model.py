@@ -7,7 +7,7 @@ from sklearn.metrics import (
     confusion_matrix
 )
 
-MODEL_PATH = "data/intent_model.pkl"
+MODEL_PATH = "data/demo_intent_model.pkl"
 GOLDEN_PATH = "data/golden_set.csv"
 
 # Load model
