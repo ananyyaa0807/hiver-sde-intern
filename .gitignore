@@ -19,3 +19,7 @@ __pycache__/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+
+
+# Allow small demo dataset
+!data/demo_resolutions.csv
