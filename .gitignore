@@ -28,3 +28,6 @@ __pycache__/
 
 # Allow reviewed golden evaluation set
 !data/golden_set.csv
+
+# Generated evaluation output
+data/reply_evaluation.json
