@@ -63,7 +63,7 @@ The initial automatically labelled training dataset contains 41,585 customer mes
 
 A 200-example evaluation set was sampled using a fixed random seed.
 
-The examples were reviewed and labelled using the six project intents.
+The examples were initially AI-assisted labelled and then manually reviewed and corrected using the six project intents.
 
 ### Results
 
@@ -109,13 +109,13 @@ Input:
 Example output:
 
 - Intent: `app_device_issue`
-- High intent confidence
-- Strong historical similarity
-- Decision: `AUTO-HANDLE`
+- Intent confidence: 0.999
+- Historical similarity: 0.44
+- Decision: `ESCALATE`
 
-The retrieved historical SpotifyCares response is used as the basis for the draft.
+The system escalates this example because the historical similarity is just below the 0.45 auto-handling threshold.
 
-For an unusual message with weak historical evidence, the system can instead return:
+For an unusual message with weak historical evidence, the system can similarly return:
 
 - Decision: `ESCALATE`
 - Reason: insufficient confidence or weak historical evidence
@@ -191,7 +191,9 @@ The focus was on demonstrating the core decision-making pipeline and evaluating 
 
 ## 12. Reproduction
 
-Create and activate a Python virtual environment:
+The repository includes a small demo model, demo resolution dataset, and golden evaluation set so the core evaluation can be reproduced without downloading the full Twitter dataset.
+
+### Install dependencies
 
 ```bash
 python -m venv .venv
